@@ -1,0 +1,52 @@
+programa {
+  funcao inicio() {
+
+
+//passo 1: declarar variáveis
+var
+  vetor: vetor[1..10] de inteiro
+  i: inteiro
+  soma: inteiro
+media: real
+  
+  //passo 2: definir valores do vetor
+vetor[1] <- 2
+vetor[2] <- 5
+vetor[3] <- 1
+vetor[4] <- 3
+vetor[5] <- 4
+vetor[6] <- 9
+vetor[7] <- 7
+vetor[8] <- 8
+vetor[9] <- 10
+vetor[10] <- 6
+
+
+//passo 3: exibir elementos nos indices impares do vetor com laço para
+escreva("Os elememtos nos índices ímpares do vetor são:    ")
+para i de 1 ate 10 passo 2 faca
+  escreva(vetor[i], " ")
+  fim para
+escreva("\n")
+//passo 4: exibir elementos numeros pares do vetor com laço para
+
+escreva("elementos pares do vetor: ")
+para i de 1 ate 10 faca
+  se vetor[i] mod 2 = 0 entao
+  screva(vetor[i], " ")
+  fim se
+fim para
+
+escreva("\n")
+//passo 5: calcular soma de todos os elementos do vetor
+soma <- 0
+para i de 1 ate 10 faca
+soma <- soma + vetor[i]
+fim para
+// passo6: calcular media atraves da soma dividido pelo numero de posicoes do vetor
+media <- soma / 10.0
+// passo 7: exibir ao usuario a som e a média
+escreva("o valor da soma de todos os elementos do vetor é igual a:    ", soma,   ")
+escreva("o valor da média de todos os elementos do vetor é:    ", media,   ")
+  }
+}
