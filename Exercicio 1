@@ -1,0 +1,43 @@
+programa
+{
+    funcao inicio()
+    {
+      //declarar vetor e variáveis
+        inteiro vetor[10]
+        inteiro i, j, maior, t
+//atribuir valores fixos ao vetor de 10 posições
+        vetor[0] := 10
+        vetor[1] := 2
+       vetor[2] := 8
+        vetor[3] := 4
+     vetor[4] := 6
+        vetor[5] := 7
+        vetor[6] := 3
+        vetor[7] := 9
+        vetor[8] := 1
+        vetor[9] := 5
+        
+// exibindo ao usuario como está o vetor antes de ser ordenado
+        escreva("o vetor a ser ordenado é: ")
+        para(i := 0; i < 10; i++){
+       escreva(vetor[i] + " ")
+        }
+  //laço for para percorrer todos os campos do vetor
+        para(i := 0; i < 10; i++){
+      posicao_maior := i
+            para(j := i+1; j < 10; j++){
+          se(vetor[j] > vetor[maior]){
+        posicao_maior := j
+                }
+            }
+            t := vetor[i]
+        vetor[i] := vetor[posicao_maior]
+            vetor[posicao_maior] := t
+        }
+// exibindo o vetor apos a ordenacao dos numeros em ordem decrescente
+  escreva("vetor ordenado=  ")
+ para(i := 0; i < 10; i++){
+    escreva("  ", vetor[i])
+        }
+    }
+}
