@@ -1,1 +1,30 @@
+package classCodes;
+import java.util.Scanner;
+public class LacoWhile {
+
+	public static void main(String[] args) {
+		 Scanner scanner = new Scanner(System.in);
+
+		    int contadorMenores=0;
+		    int contadorMaiores=0;
+		    int idade =0;
+		    
+			while (idade >= 0) {
+	           System.out.println("Digite uma idade inteira positiva: \nPara pausar o sistema, digite um número negativo");
+	            idade = scanner.nextInt();
+	            if (idade < 21 && idade >= 0){
+	                contadorMenores++;
+	            } if (idade>50){
+	                contadorMaiores ++;
+	              }
+			    
+			}
+	    System.out.println("O total de idades menores que 21 anos é de: "+contadorMenores);
+	    System.out.println("O total de idades maiores que 21 anos é de: "+contadorMaiores);
+		    
+		}
+	}
+
+
+
 
