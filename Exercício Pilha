@@ -1,0 +1,72 @@
+//
+//Escreva um programa Java contendo uma Collection Stack (Pilha) de Objetos da Classe String,
+//para organizar a retirada de livros em uma pilha. O programa deverá ter um Menu que aceitará as opções 0, 1, 2 e 3:
+//1: Adicionar um novo livro na pilha. Deve solicitar o nome do livro.
+//2: Listar todos os livros da Pilha
+//3: Retirar um livro da pilha 
+//0: O programa deve ser finalizado. 
+
+package classCodes;
+
+import java.util.LinkedList;
+import java.util.Stack;
+import java.util.Scanner;
+
+public class Aula12pt2 {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+		Stack<String> pilha = new Stack<String>();
+
+		 int op;
+		
+
+	        do {
+	            System.out.println("\nDigite a opção desejada no menu: ");
+	            System.out.println("1: Adicionar novo livro");
+	            System.out.println("2: Listar todos os livros");
+	            System.out.println("3: Retirar um livro da pilha");
+	            System.out.println("0: Sair");
+	            
+	            op = scanner.nextInt();
+	            
+	   	if (op == 0) {
+	       System.out.println("Programa finalizado.");
+	    }
+		
+		switch (op) {
+
+		case 1:
+			System.out.println("\nNome do Livro: ");
+			String nome = scanner.next();
+			pilha.push(nome);
+			System.out.println("\nLivros da pilha: " +pilha);
+			System.out.println("\nLivro adicionado com sucesso!");
+
+		break;
+
+		
+		case 2:
+
+			System.out.println("\nLivros da pilha: " +pilha);
+		break;
+
+		
+		case 3:
+
+			System.out.println("\nRetirando livro: " + pilha.pop());
+
+		break;
+
+		default:		
+		
+		}
+	
+	        } while (op != 0);
+
+	    
+	        scanner.close();
+
+	}
+}
