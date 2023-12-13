@@ -1,0 +1,64 @@
+package classCodes;
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
+
+public class Aula12 {
+
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+		Queue<String> fila = new LinkedList<String>();
+
+		 int op;
+		
+
+	        do {
+	            System.out.println("\nDigite a opção desejada no menu: ");
+	            System.out.println("1: Adicionar Cliente");
+	            System.out.println("2: Listar Clientes");
+	            System.out.println("3: Chamar Cliente");
+	            System.out.println("0: Sair");
+	            
+	            op = scanner.nextInt();
+	            
+	   	if (op == 0) {
+	       System.out.println("Programa finalizado.");
+	    }
+		
+		switch (op) {
+
+		case 1:
+			System.out.println("\nNome do cliente: ");
+			String nome = scanner.next();
+			fila.add(nome);
+			System.out.println("\nClientes da fila: " +fila);
+			System.out.println("\nCliente adicionado com sucesso!");
+
+		break;
+
+		
+		case 2:
+
+			System.out.println("\nClientes da fila: " +fila);
+		break;
+
+		
+		case 3:
+
+			System.out.println("\nChamando cliente: " + fila.remove());
+
+		break;
+
+		default:		
+		
+		}
+	
+	        } while (op != 0);
+
+	    
+	        scanner.close();
+
+	}
+}
